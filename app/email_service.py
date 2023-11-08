@@ -21,7 +21,6 @@ def send_email(recipient_address=SENDER_ADDRESS, subject="[Shopping Cart App] Te
     print("CLIENT:", type(client))
 
     message = Mail(from_email=SENDER_ADDRESS, to_emails=recipient_address, subject=subject, html_content=html_content)
-
     try:
         response = client.send(message)
 
@@ -29,12 +28,12 @@ def send_email(recipient_address=SENDER_ADDRESS, subject="[Shopping Cart App] Te
         print(response.status_code) #> 202 indicates SUCCESS
         print(response.body)
         print(response.headers)
+        return response.status_code
 
     except Exception as err:
         print(type(err))
         print(err)
-
-    return response.status_code
+        return None
 
 
 
