@@ -34,6 +34,9 @@ def send_email(recipient_address=SENDER_ADDRESS, subject="[Shopping Cart App] Te
         print(type(err))
         print(err)
 
+    return response.status_code
+
+
 
 if __name__ == "__main__":
 
