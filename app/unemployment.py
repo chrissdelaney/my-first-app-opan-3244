@@ -8,8 +8,7 @@ load_dotenv()
 
 API_KEY = os.getenv("ALPHAVANTAGE_API_KEY")
 
-if __name__ == "__main__":
-    
+def fetch_data():
     request_url = f"https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey={API_KEY}"
 
     response = requests.get(request_url)
@@ -19,6 +18,12 @@ if __name__ == "__main__":
     print(parsed_response.keys())
 
     data = parsed_response["data"]
+
+    return data
+
+
+if __name__ == "__main__":
+    data = fetch_data()
 
     # Challenge A
     #
