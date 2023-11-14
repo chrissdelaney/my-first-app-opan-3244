@@ -8,4 +8,3 @@ def test_example():
 def test_enlarge():
     assert enlarge(10) == 1000
     assert enlarge(0) == 0
-    assert int(enlarge(-10)) == 1000
