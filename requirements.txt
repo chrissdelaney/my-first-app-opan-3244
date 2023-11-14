@@ -10,3 +10,5 @@ python-dotenv
 pytest
 
 sendgrid
+
+flask
