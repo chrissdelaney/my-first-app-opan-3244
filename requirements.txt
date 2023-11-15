@@ -11,4 +11,7 @@ pytest
 
 sendgrid
 
+pgeocode
+
 flask
+

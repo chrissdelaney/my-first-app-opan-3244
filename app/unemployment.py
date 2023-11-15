@@ -1,6 +1,6 @@
 import requests
 import json
-import plotly.express
+import plotly.express as px
 from dotenv import load_dotenv
 import os
 
@@ -59,5 +59,5 @@ if __name__ == "__main__":
     dates = [d["date"] for d in data]
     rates = [float(d["value"]) for d in data]
 
-    fig = plotly.line(x=dates, y=rates, title="United States Unemployment Rate over time", labels= {"x": "Month", "y": "Unemployment Rate"})
+    fig = px.line(x=dates, y=rates, title="United States Unemployment Rate over time", labels= {"x": "Month", "y": "Unemployment Rate"})
     fig.show()
