@@ -9,7 +9,7 @@ home_routes = Blueprint("home_routes", __name__)
 def index():
     print("HOME...")
     #return "Welcome Home"
-    return render_template("home.html")
+    return render_template("home.html", name="Chris")
 
 @home_routes.route("/about")
 def about():
@@ -31,8 +31,8 @@ def hello_world():
     name = url_params.get("name") or "World"
 
     message = f"Hello, {name}!"
-    return message
-    #return render_template("hello.html", message=message)
+    #return message
+    return render_template("hello.html", message=message)
 
 @home_routes.route("/api/books.json")
 def books():
