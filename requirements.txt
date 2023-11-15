@@ -12,3 +12,6 @@ pytest
 sendgrid
 
 pgeocode
+
+flask
+
