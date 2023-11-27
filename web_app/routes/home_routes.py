@@ -1,5 +1,5 @@
 # this is the "web_app/routes/home_routes.py" file...
-import json
+
 from flask import Blueprint, request, render_template
 
 home_routes = Blueprint("home_routes", __name__)
@@ -9,7 +9,7 @@ home_routes = Blueprint("home_routes", __name__)
 def index():
     print("HOME...")
     #return "Welcome Home"
-    return render_template("home.html", name="Chris")
+    return render_template("home.html")
 
 @home_routes.route("/about")
 def about():
@@ -33,13 +33,3 @@ def hello_world():
     message = f"Hello, {name}!"
     #return message
     return render_template("hello.html", message=message)
-
-@home_routes.route("/api/books.json")
-def books():
-    print("BOOKS...")
-    books = json.dumps([
-        {"id":1, "title": "harry potter", "author": "rowling"},
-        {"id":2, "title": "hunger games", "author": "collins"},
-        {"id":3, "title": "lord of the rings", "author": "tolken"},
-    ])
-    return books
