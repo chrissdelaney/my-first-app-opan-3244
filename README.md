@@ -56,11 +56,6 @@ Send an example email:
 python -m app/email_service.py
 ```
 
-Check the weather forecast:
-```sh
-python -m app.weather
-```
-
 
 ## Testing
 
@@ -68,4 +63,12 @@ Run tests:
 
 ```sh
 pytest
+```
+
+## Running a web app
+set FLASK_app = web_app in your .env file
+
+Run on localhost:
+```sh
+flask run
 ```
